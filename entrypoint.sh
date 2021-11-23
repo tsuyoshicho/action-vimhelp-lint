@@ -22,9 +22,13 @@ find "${INPUT_BASEDIR}" \( -name "*.txt" -or -name "*.??x" \) -type f -print0 \
       -c "verb VimhelpLintEcho"          \
       -c q >> "${RESULT_LOG}"
 
+# display result
+echo lint result
+cat "${RESULT_LOG}"
+
 # shellcheck disable=SC2086
 cat "${RESULT_LOG}" | reviewdog                       \
-      -efm="=%f:%l:%c:%trror:%n:%m"                   \
+      -efm="%f:%l:%c:%trror:%n:%m"                    \
       -efm="%f:%l:%c:%tarning:%n:%m"                  \
       -name="${INPUT_TOOL_NAME}"                      \
       -reporter="${INPUT_REPORTER:-github-pr-review}" \
