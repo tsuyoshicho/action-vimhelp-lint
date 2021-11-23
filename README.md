@@ -1,9 +1,9 @@
 # GitHub Action: Lint vim help format
 
-<!--
-[![Docker Image CI](https://github.com/tsuyoshicho/action-vimhelp-tagname-check/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/tsuyoshicho/action-vimhelp-tagname-check/actions)
-[![Release](https://github.com/tsuyoshicho/action-vimhelp-tagname-check/workflows/release/badge.svg)](https://github.com/tsuyoshicho/action-vimhelp-tagname-check/releases)
--->
+[![Docker Image CI](https://github.com/tsuyoshicho/action-vimhelp-lint/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/tsuyoshicho/action-vimhelp-lint/actions)
+[![Release](https://github.com/tsuyoshicho/action-vimhelp-lint/workflows/release/badge.svg)](https://github.com/tsuyoshicho/action-vimhelp-lint/releases)
+
+Vim help lint using [machakann/vim-vimhelplint](https://github.com/machakann/vim-vimhelplint).
 
 ## action-vimhelp-lint
 
