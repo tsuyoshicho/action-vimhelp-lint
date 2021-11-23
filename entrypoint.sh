@@ -12,12 +12,24 @@ export VIMHELPLINT_PATH="${GITHUB_WORKSPACE}/vim-vimhelplint"
 rm -rf "${VIMHELPLINT_PATH}"
 git clone --depth 1 https://github.com/machakann/vim-vimhelplint "${VIMHELPLINT_PATH}"
 
-find doc \( -name "*.txt" -or -name "*.??x"  \) -type f -print0 | xargs  -0 -I {} \
-vim -esN --cmd "set rtp+=${VIMHELPLINT_PATH}" \
-  -c "filetype plugin on"   \
-  -c "e {}" \
-  -c "verb VimhelpLintEcho" \
-  -c q
+# debug
+echo path "${VIMHELPLINT_PATH}"
+find doc \( -name "*.txt" -or -name "*.??x"  \) -type f -print0 | echo find file {}
+echo run vim opt
+echo cmd "set rtp+=${VIMHELPLINT_PATH}"
+echo c "filetype plugin on"
+echo c "e {}"
+echo c "verb VimhelpLintEcho"
+echo c q
+
+# find doc \( -name "*.txt" -or -name "*.??x"  \) -type f -print0 \
+#   | xargs  -0 -I {} vim -esN \
+#     --cmd "set rtp+=${VIMHELPLINT_PATH}" \
+#       -c "filetype plugin on"   \
+#       -c "e {}"                 \
+#       -c "verb VimhelpLintEcho" \
+#       -c q
+
 # # shellcheck disable=SC2086
 #     | reviewdog -efm="%f:%l:%c:%trror: %m"                                        \
 #                 -efm="%f:%l:%c:%tarning: %m"                                      \
