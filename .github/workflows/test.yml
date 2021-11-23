@@ -14,5 +14,5 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true
-      - name: helptag-github-check
+      - name: helplint-check
         uses: ./
