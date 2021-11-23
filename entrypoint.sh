@@ -14,7 +14,7 @@ git clone --depth 1 https://github.com/machakann/vim-vimhelplint "${VIMHELPLINT_
 
 # debug
 echo path "${VIMHELPLINT_PATH}"
-find doc \( -name "*.txt" -or -name "*.??x"  \) -type f -print0 | echo find file {}
+find doc \( -name "*.txt" -or -name "*.??x"  \) -type f -print0 | xargs  -0 -I {} echo find file {}
 echo run vim opt
 echo cmd "set rtp+=${VIMHELPLINT_PATH}"
 echo c "filetype plugin on"
