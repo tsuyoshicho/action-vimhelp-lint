@@ -5,6 +5,8 @@
 
 Vim help lint using [machakann/vim-vimhelplint](https://github.com/machakann/vim-vimhelplint).
 
+__WIP Project__
+
 ## action-vimhelp-lint
 
 Check Vim help (/doc)
