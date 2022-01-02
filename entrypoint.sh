@@ -15,7 +15,7 @@ git clone --depth 1 https://github.com/machakann/vim-vimhelplint "${VIMHELPLINT_
 export RESULT_LOG=result.txt
 touch "${RESULT_LOG}"
 find "${INPUT_BASEDIR}" \( -name "*.txt" -or -name "*.??x" \) -type f -print0 \
-  | xargs -0 -I {} vim -esN \
+  | xargs -0 -I {} vim --clean -esN \
     --cmd "set rtp+=${VIMHELPLINT_PATH}" \
       -c "filetype plugin on"            \
       -c "e {}"                          \
