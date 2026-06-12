@@ -1,4 +1,4 @@
-FROM thinca/vim:latest@sha256:10d997bbcda254c6039dcd0fde1aaac7d8ee496f177fc46a818d83c484b3bf50
+FROM thinca/vim:latest@sha256:68b5dfe7dfde437350c972e0f609b20ed706211650087fddf71d6c33684b7993
 
 # reviewdog
 ENV REVIEWDOG_VERSION=v0.21.0
